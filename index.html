@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rhythm Coach Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark light;
+      --rc-bg: #071523;
+      --rc-bg-soft: #0b1d32;
+      --rc-surface: #10253c;
+      --rc-surface-alt: #152b45;
+      --rc-border: #264a6d;
+      --rc-primary: #1f8cff;
+      --rc-secondary: #55b5ff;
+      --rc-accent: #2ae09f;
+      --rc-text: #eaf2ff;
+      --rc-text-muted: #afc6e0;
+      --rc-shadow: 0 26px 80px rgba(0, 0, 0, 0.42);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --rc-bg: #f6faff;
+        --rc-bg-soft: #eaf2fc;
+        --rc-surface: #fbfcff;
+        --rc-surface-alt: #dde8f6;
+        --rc-border: #b2c4d9;
+        --rc-primary: #005fb8;
+        --rc-secondary: #326ca2;
+        --rc-accent: #0e8f61;
+        --rc-text: #131c29;
+        --rc-text-muted: #425466;
+        --rc-shadow: 0 22px 56px rgba(17, 31, 48, 0.16);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: "Avenir Next", "Segoe UI Variable", "Trebuchet MS", "Helvetica Neue", sans-serif;
+      line-height: 1.65;
+      color: var(--rc-text);
+      background:
+        radial-gradient(1100px 700px at 10% 0%, color-mix(in srgb, var(--rc-primary) 19%, transparent), transparent 65%),
+        radial-gradient(900px 520px at 100% 12%, color-mix(in srgb, var(--rc-accent) 14%, transparent), transparent 62%),
+        linear-gradient(180deg, var(--rc-bg), var(--rc-bg-soft));
+      padding: 26px 18px 40px;
+    }
+
+    .wrap {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      animation: fade-in 360ms ease-out;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      border: 1px solid color-mix(in srgb, var(--rc-primary) 36%, var(--rc-border));
+      background:
+        linear-gradient(140deg, color-mix(in srgb, var(--rc-primary) 26%, var(--rc-surface)) 0%, var(--rc-surface) 42%, color-mix(in srgb, var(--rc-accent) 15%, var(--rc-surface)) 100%);
+      box-shadow: var(--rc-shadow);
+      padding: 24px 24px 22px;
+      margin-bottom: 18px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -96px;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, color-mix(in srgb, var(--rc-secondary) 48%, transparent), transparent 72%);
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--rc-text-muted);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--rc-primary), var(--rc-accent));
+      box-shadow: 0 0 0 5px color-mix(in srgb, var(--rc-primary) 18%, transparent);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.58rem, 2.3vw, 2.18rem);
+      line-height: 1.15;
+      font-weight: 760;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      margin: 0;
+      color: color-mix(in srgb, var(--rc-text) 80%, var(--rc-text-muted));
+      max-width: 72ch;
+    }
+
+    .lang-switch {
+      margin-top: 16px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 8px;
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--rc-border) 70%, transparent);
+      background: color-mix(in srgb, var(--rc-surface) 88%, transparent);
+      backdrop-filter: blur(2px);
+    }
+
+    .lang-switch a {
+      text-decoration: none;
+      color: var(--rc-text);
+      font-weight: 640;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+    }
+
+    .lang-switch a:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--rc-primary) 42%, transparent);
+      background: color-mix(in srgb, var(--rc-primary) 15%, transparent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .policy {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--rc-border);
+      background:
+        linear-gradient(175deg, color-mix(in srgb, var(--rc-surface-alt) 32%, transparent), transparent 35%),
+        var(--rc-surface);
+      box-shadow: var(--rc-shadow);
+      padding: 20px;
+      animation: rise 420ms ease both;
+    }
+
+    #tr.policy {
+      animation-delay: 75ms;
+    }
+
+    .policy h2 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: -0.01em;
+    }
+
+    .updated {
+      margin: 6px 0 0;
+      color: var(--rc-text-muted);
+      font-size: 0.93rem;
+      font-weight: 620;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      margin: 14px 0 18px;
+      background: linear-gradient(90deg, var(--rc-primary), transparent 78%);
+      opacity: 0.5;
+    }
+
+    .policy h3 {
+      margin: 18px 0 7px;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      color: color-mix(in srgb, var(--rc-text) 88%, var(--rc-secondary));
+    }
+
+    .policy p {
+      margin: 0;
+      color: color-mix(in srgb, var(--rc-text) 88%, var(--rc-text-muted));
+      font-size: 0.97rem;
+    }
+
+    .policy ul {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+      color: color-mix(in srgb, var(--rc-text) 90%, var(--rc-text-muted));
+      font-size: 0.97rem;
+    }
+
+    .policy li::marker {
+      color: var(--rc-primary);
+    }
+
+    .policy code {
+      display: inline-block;
+      border-radius: 7px;
+      border: 1px solid color-mix(in srgb, var(--rc-primary) 35%, transparent);
+      background: color-mix(in srgb, var(--rc-primary) 14%, transparent);
+      font-family: "JetBrains Mono", "SF Mono", "Consolas", monospace;
+      font-size: 0.85em;
+      padding: 1px 6px;
+      color: color-mix(in srgb, var(--rc-text) 80%, white);
+    }
+
+    a {
+      color: color-mix(in srgb, var(--rc-secondary) 72%, var(--rc-text));
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: color-mix(in srgb, var(--rc-primary) 76%, var(--rc-text));
+    }
+
+    @media (max-width: 860px) {
+      body {
+        padding: 18px 14px 30px;
+      }
+
+      .hero {
+        padding: 19px 16px 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .policy {
+        padding: 17px 15px;
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="brand"><span class="dot"></span>Pace Apps</div>
+      <h1>Rhythm Coach Privacy Policy</h1>
+      <p>
+        Official privacy policy for Rhythm Coach (package id:
+        <code>com.paceapps.rhythmcoach</code>).
+      </p>
+      <nav class="lang-switch" aria-label="Language quick links">
+        <a href="#en">English</a>
+        <a href="#tr">Turkce</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+      <article id="en" class="policy" lang="en">
+        <h2>English</h2>
+        <p class="updated">Last updated: March 14, 2026</p>
+        <div class="divider"></div>
+
+        <p>
+          Rhythm Coach (package id: <code>com.paceapps.rhythmcoach</code>) is provided by Pace Apps.
+          This Privacy Policy explains what data the app accesses, how it is used, and your choices.
+        </p>
+
+        <h3>Data We Access</h3>
+        <ul>
+          <li><strong>Microphone input (RECORD_AUDIO permission):</strong> Used only for the live timing analysis feature in <code>Timing Check</code>.</li>
+        </ul>
+
+        <h3>How We Use Data</h3>
+        <ul>
+          <li>Microphone audio is processed in real time on device to calculate timing metrics (early/late/in-pocket feedback).</li>
+          <li>We do not require account signup.</li>
+          <li>We do not collect personal profile data (name, email, phone number).</li>
+          <li>We do not use your microphone input for advertising or profiling.</li>
+        </ul>
+
+        <h3>Data Storage and Sharing</h3>
+        <ul>
+          <li>Rhythm Coach does not upload raw microphone audio to our servers.</li>
+          <li>Rhythm Coach does not sell your personal data.</li>
+          <li>Rhythm Coach does not share microphone audio with third parties.</li>
+        </ul>
+
+        <h3>Third-Party Services</h3>
+        <p>Current app release does not include ad SDKs or in-app purchase SDKs.</p>
+
+        <h3>Your Controls</h3>
+        <ul>
+          <li>You can deny microphone permission and continue using non-microphone features.</li>
+          <li>You can revoke microphone permission at any time from Android system settings.</li>
+        </ul>
+
+        <h3>Children</h3>
+        <p>
+          Rhythm Coach is a general audience music-practice utility and does not intentionally collect
+          personal data from children.
+        </p>
+
+        <h3>Contact</h3>
+        <p>
+          For privacy questions, contact:
+          <a href="mailto:privacy@paceapps.dev">privacy@paceapps.dev</a>
+        </p>
+
+        <h3>Changes to This Policy</h3>
+        <p>
+          We may update this policy as the app evolves. Material changes will be reflected with a new
+          "Last updated" date.
+        </p>
+      </article>
+
+      <article id="tr" class="policy" lang="tr">
+        <h2>Turkce</h2>
+        <p class="updated">Son guncelleme: 14 Mart 2026</p>
+        <div class="divider"></div>
+
+        <p>
+          Rhythm Coach (<code>com.paceapps.rhythmcoach</code>) Pace Apps tarafindan sunulmaktadir.
+          Bu politika uygulamanin hangi verilere eristigini, bunlari nasil kullandigini ve sizin secimlerinizi aciklar.
+        </p>
+
+        <h3>Eristigimiz Veriler</h3>
+        <ul>
+          <li><strong>Mikrofon verisi (RECORD_AUDIO izni):</strong> Yalnizca <code>Timing Check</code> ozelligindeki canli zamanlama analizi icin kullanilir.</li>
+        </ul>
+
+        <h3>Veriyi Nasil Kullaniriz</h3>
+        <ul>
+          <li>Mikrofon sesi cihaz uzerinde gercek zamanli islenir ve zamanlama metrikleri (erken/gec/in-pocket) hesaplanir.</li>
+          <li>Uygulama hesap acmayi zorunlu kilmaz.</li>
+          <li>Ad, e-posta, telefon gibi kisisel profil verileri toplanmaz.</li>
+          <li>Mikrofon verisi reklam veya profil cikarma amaciyla kullanilmaz.</li>
+        </ul>
+
+        <h3>Saklama ve Paylasim</h3>
+        <ul>
+          <li>Ham mikrofon sesi sunucularimiza yuklenmez.</li>
+          <li>Kisisel veriler satilmaz.</li>
+          <li>Mikrofon verisi ucuncu taraflarla paylasilmaz.</li>
+        </ul>
+
+        <h3>Ucuncu Taraf Servisler</h3>
+        <p>Mevcut surumde reklam SDK'si veya uygulama ici satin alma SDK'si bulunmamaktadir.</p>
+
+        <h3>Kontrol Sizde</h3>
+        <ul>
+          <li>Mikrofon iznini vermeden mikrofon gerektirmeyen ozellikleri kullanabilirsiniz.</li>
+          <li>Mikrofon iznini Android ayarlarindan istediginiz zaman geri cekebilirsiniz.</li>
+        </ul>
+
+        <h3>Cocuklarin Gizliligi</h3>
+        <p>
+          Rhythm Coach genel kullanimli bir muzik pratik uygulamasidir ve cocuklardan bilerek kisisel
+          veri toplamaz.
+        </p>
+
+        <h3>Iletisim</h3>
+        <p>
+          Gizlilik sorulari icin:
+          <a href="mailto:privacy@paceapps.dev">privacy@paceapps.dev</a>
+        </p>
+
+        <h3>Politikadaki Degisiklikler</h3>
+        <p>
+          Uygulama gelistikce bu politika guncellenebilir. Onemli degisikliklerde "Son guncelleme"
+          tarihi yenilenir.
+        </p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
